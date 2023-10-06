@@ -6,7 +6,7 @@ my_host_name = 'localhost'
 my_port = 8888
 my_html_folder_path = 'E:\\Documents\\code2\\zencane.github.io\\blog\\'
 
-my_home_page_file_path = 'blog.html'
+my_home_page_file_path = 'main.html'
 
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
@@ -33,7 +33,6 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self._set_headers()
         self.wfile.write((self.getContent(self.getPath())))
-
 
 my_handler = MyHttpRequestHandler
 

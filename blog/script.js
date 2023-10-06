@@ -6,4 +6,4 @@ $(document).ready(function(){
         $(this).closest(".w3-container").find(".invisible-content").toggle();
         $(this).closest(".w3-container").find(".visible-content").toggle();
     });
-});
+})
