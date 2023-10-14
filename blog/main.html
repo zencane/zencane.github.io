@@ -1,171 +1,193 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Montev's Legal</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-      <style>
-         body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-         details.description summary::after {
-            content: attr(data-open);
-            opacity: 0;
-            font-size: 5px;
-         }
-         details.description[open] summary::after {
-            content: attr(data-open);
-            opacity: 1;
-            font-size: 14px;
-         }
-         details.description summary::before {
-            content: attr(data-close);
-            opacity: 0;
-            font-size: 5px;
-         }
-         details.description:not([open]) summary::before {
-            content: attr(data-close);
-            opacity: 1;
-            font-size: 14px;
-         }
-         .MainDivs {
-         opacity : 0;
+
+<head>
+   <title>Montev's Legal</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+   <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+         font-family: "Raleway", sans-serif
+      }
+
+      details.description summary::after {
+         content: attr(data-open);
+         opacity: 0;
+         font-size: 5px;
+      }
+
+      details.description[open] summary::after {
+         content: attr(data-open);
+         opacity: 1;
+         font-size: 14px;
+      }
+
+      details.description summary::before {
+         content: attr(data-close);
+         opacity: 0;
+         font-size: 5px;
+      }
+
+      details.description:not([open]) summary::before {
+         content: attr(data-close);
+         opacity: 1;
+         font-size: 14px;
+      }
+
+      .MainDivs {
+         opacity: 0;
          visibility: visible;
          transition: all 4s ease-in-out;
-         }
-      </style>
-      <script src="https://www.w3schools.com/lib/w3.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script> 
-      <script type="text/javascript" src="script2.js"></script>
-      <script>
-         function includeHTML() {
-           var z, i, elmnt, file, xhttp;
-           /* Loop through a collection of all HTML elements: */
-           z = document.getElementsByTagName("*");
-           for (i = 0; i < z.length; i++) {
-             elmnt = z[i];
-             /*search for elements with a certain atrribute:*/
-             file = elmnt.getAttribute("w3-include-html");
-             if (file) {
+      }
+   </style>
+   <script src="https://www.w3schools.com/lib/w3.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+   <script type="text/javascript" src="script2.js"></script>
+   <script>
+      function includeHTML() {
+         var z, i, elmnt, file, xhttp;
+         /* Loop through a collection of all HTML elements: */
+         z = document.getElementsByTagName("*");
+         for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
                /* Make an HTTP request using the attribute value as the file name: */
                xhttp = new XMLHttpRequest();
-               xhttp.onreadystatechange = function() {
-                 if (this.readyState == 4) {
-                   if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                   if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                   /* Remove the attribute, and call this function once more: */
-                   elmnt.removeAttribute("w3-include-html");
-                   includeHTML();
-                 }
+               xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4) {
+                     if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                     if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                     /* Remove the attribute, and call this function once more: */
+                     elmnt.removeAttribute("w3-include-html");
+                     includeHTML();
+                  }
                }
                xhttp.open("GET", file, true);
                xhttp.send();
                /* Exit the function: */
                return;
-             }
-           }
+            }
          }
-      </script>
-   </head>
-   <body>
-      <!-- w3-content defines a container for fixed size centered content, 
+      }
+   </script>
+</head>
+
+<body>
+   <!-- w3-content defines a container for fixed size centered content, 
          and is wrapped around the whole page content, except for the footer in this example -->
-      <div class="w3-content" style="max-width:1400px">
-         <!-- Header -->
-         <header class="w3-container w3-center w3-padding-32">
-            <h1><b>Montev's Legal Support</b></h1>
-            <p>Welcome to Montev's hub of <span class="w3-tag">free legal support</span></p>
-         </header>
-         <div class="MainDivs">
-            <!-- Grid -->
-            <div id="blogs" class="w3-row">
-               <!-- Blog entries -->
-               <div class="w3-col l8 s12">
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/health.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/celebrate.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/instructing.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/legal.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/support.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/house.html"></div>
-                  <hr>
-                  <!-- Blog entry -->
-                  <div w3-include-html="pages/content.html"></div>
-                  <hr>
-                  <!-- END BLOG ENTRIES -->
-               </div>
-               <!-- Introduction menu -->
-               <div id="posts" class="w3-col l4">
-                  <!-- About Card -->
-                  <div class="w3-card w3-margin w3-margin-top">
-                     <img src="images/avatar_g.jpg" style="width:100%">
-                     <div class="w3-container w3-white">
-                        <h4><b>Montev</b></h4>
-                        <p>My mission is to provide my local community with free legal support.</p>
-                     </div>
-                  </div>
-                  <hr>
-                  <!-- Posts -->
-                  <div class="w3-card w3-margin">
-                     <div class="w3-container w3-padding">
-                        <h4>Highlighted Posts</h4>
-                     </div>
-                     <ul class="w3-ul w3-hoverable w3-white">
-                        <div w3-include-html="pages/pagespreview/legal.html"></div>
-                        <div w3-include-html="pages/pagespreview/house.html"></div>
-                        <div w3-include-html="pages/pagespreview/instructing.html"></div>
-                        <div w3-include-html="pages/pagespreview/support.html"></div>
-                        <div w3-include-html="pages/pagespreview/celebrate.html"></div>
-                        <div w3-include-html="pages/pagespreview/health.html"></div>
-                        <div w3-include-html="pages/pagespreview/content.html"></div>
-                     </ul>
-                  </div>
-                  <hr>
-                  <!-- Labels / tags -->
-                  <div class="w3-card w3-margin">
-                     <div class="w3-container w3-padding">
-                        <h4>Tags</h4>
-                     </div>
-                     <div class="w3-container w3-white">
-                        <p><span class="w3-tag w3-black w3-margin-bottom">Law</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Mental Health</span>
-                           <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Support</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Europe</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Welfare</span>
-                           <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Legal</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Housing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-                           <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Court</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Immigration</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Debt</span>
-                           <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">World</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Discrimination</span>
-                        </p>
-                     </div>
-                  </div>
-                  <!-- END Introduction Menu -->
-               </div>
-               <!-- END GRID -->
+   <div class="w3-content" style="max-width:1400px">
+      <!-- Header -->
+      <header class="w3-container w3-center w3-padding-32">
+         <h1><b>Montev's Legal Support</b></h1>
+         <p>Welcome to Montev's hub of <span class="w3-tag">free legal support</span></p>
+      </header>
+      <div class="MainDivs">
+         <!-- Grid -->
+         <div id="blogs" class="w3-row">
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
+               <!-- Blog entry -->
+               <div w3-include-html="pages/health.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/celebrate.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/instructing.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/legal.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/support.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/house.html"></div>
+               <hr>
+               <!-- Blog entry -->
+               <div w3-include-html="pages/content.html"></div>
+               <hr>
+               <!-- END BLOG ENTRIES -->
             </div>
-            <br>
-            <!-- END w3-content -->
+            <!-- Introduction menu -->
+            <div id="posts" class="w3-col l4">
+               <!-- About Card -->
+               <div class="w3-card w3-margin w3-margin-top">
+                  <img src="images/avatar_g.jpg" style="width:100%">
+                  <div class="w3-container w3-white">
+                     <h4><b>Montev</b></h4>
+                     <p>My mission is to provide my local community with free legal support.</p>
+                  </div>
+               </div>
+               <hr>
+               <!-- Posts -->
+               <div class="w3-card w3-margin">
+                  <div class="w3-container w3-padding">
+                     <h4>Highlighted Posts</h4>
+                  </div>
+                  <ul class="w3-ul w3-hoverable w3-white">
+                     <div w3-include-html="pages/pagespreview/legal.html"></div>
+                     <div w3-include-html="pages/pagespreview/house.html"></div>
+                     <div w3-include-html="pages/pagespreview/instructing.html"></div>
+                     <div w3-include-html="pages/pagespreview/support.html"></div>
+                     <div w3-include-html="pages/pagespreview/celebrate.html"></div>
+                     <div w3-include-html="pages/pagespreview/health.html"></div>
+                     <div w3-include-html="pages/pagespreview/content.html"></div>
+                  </ul>
+               </div>
+               <hr>
+               <!-- Labels / tags -->
+               <div class="w3-card w3-margin">
+                  <div class="w3-container w3-padding">
+                     <h4>Tags</h4>
+                  </div>
+                  <div class="w3-container w3-white">
+                     <p><span class="w3-tag w3-black w3-margin-bottom">Law</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Mental Health</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Support</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Europe</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Welfare</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Legal</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Housing</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Court</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Immigration</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Debt</span>
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">World</span> <span
+                           class="w3-tag w3-light-grey w3-small w3-margin-bottom">Discrimination</span>
+                     </p>
+                  </div>
+               </div>
+               <!-- END Introduction Menu -->
+            </div>
+            <!-- END GRID -->
          </div>
+         <br>
+         <!-- END w3-content -->
       </div>
-      <!-- Footer -->
-      <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-         <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-         <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-      </footer>
-      <!-- SCRIPTS -->
-      <script>
-         w3.includeHTML();
-      </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-      <script type="text/javascript" src="script.js"></script>
-   </body>
+   </div>
+   <!-- Footer -->
+   <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+      <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+      <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+   </footer>
+   <!-- SCRIPTS -->
+   <script>
+      w3.includeHTML();
+   </script>
+</body>
+
 </html>
 <!--Credits
    htmlTemplate https://www.w3schools.com/w3css/tryw3css_templates_blog.htm 

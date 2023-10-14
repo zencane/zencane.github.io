@@ -1,6 +1,6 @@
-$(window).load(function() {
+$(window).load(function () {
     element = 'MainDivs';
-    setTimeout(function() {
+    setTimeout(function () {
         $("." + element).css("opacity", "1");
     }, 1000 * 0.1);
 })
