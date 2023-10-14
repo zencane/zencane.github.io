@@ -8,6 +8,26 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <style>
          body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+         details.description summary::after {
+            content: attr(data-open);
+            opacity: 0;
+            font-size: 5px;
+         }
+         details.description[open] summary::after {
+            content: attr(data-open);
+            opacity: 1;
+            font-size: 14px;
+         }
+         details.description summary::before {
+            content: attr(data-close);
+            opacity: 0;
+            font-size: 5px;
+         }
+         details.description:not([open]) summary::before {
+            content: attr(data-close);
+            opacity: 1;
+            font-size: 14px;
+         }
          .MainDivs {
          opacity : 0;
          visibility: visible;
