@@ -8,12 +8,14 @@
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
    <style>
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
+      html {
+         overflow-y: scroll;
+         scroll-behavior: smooth;
+      }
+      a {
+         text-decoration: none;
+      }
+      body,h1,h2,h3,h4,h5 {
          font-family: "Raleway", sans-serif
       }
 
@@ -22,19 +24,16 @@
          opacity: 0;
          font-size: 5px;
       }
-
       details.description[open] summary::after {
          content: attr(data-open);
          opacity: 1;
          font-size: 14px;
       }
-
       details.description summary::before {
          content: attr(data-close);
          opacity: 0;
          font-size: 5px;
       }
-
       details.description:not([open]) summary::before {
          content: attr(data-close);
          opacity: 1;
@@ -96,26 +95,19 @@
             <!-- Blog entries -->
             <div class="w3-col l8 s12">
                <!-- Blog entry -->
-               <div w3-include-html="pages/health.html"></div>
-               <hr>
+               <div id="healthDiv" w3-include-html="pages/health.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/celebrate.html"></div>
-               <hr>
+               <div id="celebrateDiv" w3-include-html="pages/celebrate.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/instructing.html"></div>
-               <hr>
+               <div id="instructingDiv" w3-include-html="pages/instructing.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/legal.html"></div>
-               <hr>
+               <div id="legalDiv" w3-include-html="pages/legal.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/support.html"></div>
-               <hr>
+               <div id="supportDiv" w3-include-html="pages/support.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/house.html"></div>
-               <hr>
+               <div id="houseDiv"w3-include-html="pages/house.html"></div>
                <!-- Blog entry -->
-               <div w3-include-html="pages/content.html"></div>
-               <hr>
+               <div id="contentDiv" w3-include-html="pages/content.html"></div>
                <!-- END BLOG ENTRIES -->
             </div>
             <!-- Introduction menu -->
@@ -135,13 +127,13 @@
                      <h4>Highlighted Posts</h4>
                   </div>
                   <ul class="w3-ul w3-hoverable w3-white">
-                     <div w3-include-html="pages/pagespreview/legal.html"></div>
-                     <div w3-include-html="pages/pagespreview/house.html"></div>
-                     <div w3-include-html="pages/pagespreview/instructing.html"></div>
-                     <div w3-include-html="pages/pagespreview/support.html"></div>
-                     <div w3-include-html="pages/pagespreview/celebrate.html"></div>
-                     <div w3-include-html="pages/pagespreview/health.html"></div>
-                     <div w3-include-html="pages/pagespreview/content.html"></div>
+                     <a href="#legalDiv"><div id="legalPreviewDiv" w3-include-html="pages/pagespreview/legal.html"></div></a>
+                     <a href="#houseDiv"><div id="housePreviewDiv" w3-include-html="pages/pagespreview/house.html"></div></a>
+                     <a href="#instructingDiv"><div id="instructingPreviewDiv" w3-include-html="pages/pagespreview/instructing.html"></div></a>
+                     <a href="#supportDiv"><div id="supportPreviewDiv" w3-include-html="pages/pagespreview/support.html"></div></a>
+                     <a href="#celebrateDiv"><div id="celebratePreviewDiv" w3-include-html="pages/pagespreview/celebrate.html"></div></a>
+                     <a href="#healthDiv"><div id="healthPreviewDiv" w3-include-html="pages/pagespreview/health.html"></div></a>
+                     <a href="#contentDiv"><div id="contentPreviewDiv" w3-include-html="pages/pagespreview/content.html"></div></a>
                   </ul>
                </div>
                <hr>
