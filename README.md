@@ -4,6 +4,7 @@ I currently have a phasmo page that was forked from @SirJimmothy and a law theme
 ## The main blog is [here](https://zencane.github.io/blog/main.html)
 #### Recent Changes
 - updated this README.md file
+- added hypertext reference from page previews to page
 - added more pages and updated images
 - added a github action!
 - added a fade-in effect for divs using css and jquery
