@@ -45,6 +45,25 @@
          visibility: visible;
          transition: all 4s ease-in-out;
       }
+      
+      .scroller__inner {
+         padding-block: 0.5rem;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 0.5rem;
+      }
+
+      .tag-list {
+         margin: 0;
+         padding-inline: 0;
+         list-style: none;
+      }
+      
+      .tag-list li {
+         padding: 0.5rem;
+         background: hsl(212deg 14.35% 76.27% / 29%);
+         border-radius: 0.5rem;
+      }
    </style>
    <script src="https://www.w3schools.com/lib/w3.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -140,24 +159,24 @@
                <!-- Labels / tags -->
                <div class="w3-card w3-margin">
                   <div class="w3-container w3-padding">
-                     <h4>Tags</h4>
-                  </div>
-                  <div class="w3-container w3-white">
-                     <p><span class="w3-tag w3-black w3-margin-bottom">Law</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Montevideo</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Mental Health</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Support</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Europe</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Welfare</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Legal</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Housing</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Court</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Immigration</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Debt</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">World</span>
-                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Discrimination</span>
-                     </p>
+                     <h4 style="text-align: center">Tags</h4>
+                  <div class="scroller">
+                     <ul class="tag-list scroller__inner">
+                        <li>Law</li>
+                        <li>Montevideo</li>
+                        <li>Mental Health</li>
+                        <li>Support</li>
+                        <li>Europe</li>
+                        <li>Welfare</li>
+                        <li>Legal</li>
+                        <li>Housing</li>
+                        <li>Family</li>
+                        <li>Court</li>
+                        <li>Immigration</li>
+                        <li>Debt</li>
+                        <li>World</li>
+                        <li>Discrimination</li>
+                     </ul>
                   </div>
                </div>
                <!-- END Introduction Menu -->
