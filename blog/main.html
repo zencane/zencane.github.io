@@ -12,10 +12,17 @@
          overflow-y: scroll;
          scroll-behavior: smooth;
       }
+
       a {
          text-decoration: none;
       }
-      body,h1,h2,h3,h4,h5 {
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
          font-family: "Raleway", sans-serif
       }
 
@@ -24,16 +31,19 @@
          opacity: 0;
          font-size: 5px;
       }
+
       details.description[open] summary::after {
          content: attr(data-open);
          opacity: 1;
          font-size: 14px;
       }
+
       details.description summary::before {
          content: attr(data-close);
          opacity: 0;
          font-size: 5px;
       }
+
       details.description:not([open]) summary::before {
          content: attr(data-close);
          opacity: 1;
@@ -45,7 +55,7 @@
          visibility: visible;
          transition: all 4s ease-in-out;
       }
-      
+
       .scroller__inner {
          padding-block: 0.5rem;
          display: flex;
@@ -58,7 +68,7 @@
          padding-inline: 0;
          list-style: none;
       }
-      
+
       .tag-list li {
          padding: 0.5rem;
          background: hsl(212deg 14.35% 76.27% / 29%);
@@ -124,7 +134,7 @@
                <!-- Blog entry -->
                <div id="supportDiv" w3-include-html="pages/support.html"></div>
                <!-- Blog entry -->
-               <div id="houseDiv"w3-include-html="pages/house.html"></div>
+               <div id="houseDiv" w3-include-html="pages/house.html"></div>
                <!-- Blog entry -->
                <div id="contentDiv" w3-include-html="pages/content.html"></div>
                <!-- END BLOG ENTRIES -->
@@ -160,43 +170,43 @@
                <div class="w3-card w3-margin">
                   <div class="w3-container w3-padding">
                      <h4 style="text-align: center">Tags</h4>
-                  <div class="scroller">
-                     <ul class="tag-list scroller__inner">
-                        <li>Law</li>
-                        <li>Montevideo</li>
-                        <li>Mental Health</li>
-                        <li>Support</li>
-                        <li>Europe</li>
-                        <li>Welfare</li>
-                        <li>Legal</li>
-                        <li>Housing</li>
-                        <li>Family</li>
-                        <li>Court</li>
-                        <li>Immigration</li>
-                        <li>Debt</li>
-                        <li>World</li>
-                        <li>Discrimination</li>
-                     </ul>
+                     <div class="scroller">
+                        <ul class="tag-list scroller__inner">
+                           <li>Law</li>
+                           <li>Montevideo</li>
+                           <li>Mental Health</li>
+                           <li>Support</li>
+                           <li>Europe</li>
+                           <li>Welfare</li>
+                           <li>Legal</li>
+                           <li>Housing</li>
+                           <li>Family</li>
+                           <li>Court</li>
+                           <li>Immigration</li>
+                           <li>Debt</li>
+                           <li>World</li>
+                           <li>Discrimination</li>
+                        </ul>
+                     </div>
                   </div>
+                  <!-- END Introduction Menu -->
                </div>
-               <!-- END Introduction Menu -->
+               <!-- END GRID -->
             </div>
-            <!-- END GRID -->
+            <br>
+            <!-- END w3-content -->
          </div>
-         <br>
-         <!-- END w3-content -->
       </div>
-   </div>
-   <!-- Footer -->
-   <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-      <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-      <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-   </footer>
-   <!-- SCRIPTS -->
-   <script>
-      w3.includeHTML();
-   </script>
+      <!-- Footer -->
+      <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+         <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+         <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </footer>
+      <!-- SCRIPTS -->
+      <script>
+         w3.includeHTML();
+      </script>
 </body>
 
 </html>
