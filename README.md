@@ -1,5 +1,5 @@
-# Welcome to my Github Page!
-I currently have a phasmo page that was forked from @SirJimmothy and a law themed blog that I'm working on to improve my fullstack abilities.
+# Welcome to my [Github](https://github.com/zencane) Page!
+I currently have a law themed blog I'm working on to improve my fullstack abilities, and also a forked informative guide about phasmo which I try to make commits to.
 
 ## The main blog is [here](https://zencane.github.io/blog/main.html)
 #### Recent Changes
