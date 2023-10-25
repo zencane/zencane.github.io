@@ -4,6 +4,9 @@ I currently have a law themed blog I'm working on to improve my fullstack abilit
 ## The main blog is [here](https://zencane.github.io/blog/main.html)
 #### Recent Changes
 - updated this README.md file
+- added lazy loading for images
+- improved the look of tags
+- improved the way pagepreviews are loaded onto the page
 - added hypertext reference from page previews to page
 - added more pages and updated images
 - added a github action!
