@@ -4,9 +4,9 @@ from os import path
 
 my_host_name = 'localhost'
 my_port = 8888
-my_html_folder_path = 'E:\\Documents\\code2\\zencane.github.io\\blog\\'
+my_html_folder_path = 'E:\\Documents\\code2\\zencane.github.io\\minesweeper\\'
 
-my_home_page_file_path = 'main.html'
+my_home_page_file_path = 'index.html'
 
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
