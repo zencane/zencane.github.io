@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-  border: 1px solid #ac2f2f;
+  border: 1px solid #000;
   background-color: #fff;
   width: 30px;
   height: 30px;
@@ -45,7 +45,7 @@ body {
 }
 
 .btn.active {
-  border-color: #000;
+  border-color: #ac2f2f;
 }
 
 .potmine {
